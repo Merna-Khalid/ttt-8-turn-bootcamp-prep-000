@@ -19,16 +19,11 @@ def valid_move?(board, index)
   if index.betweem(0, 8)
     if !position_taken?(board, index)
       return ture
+    end
   end
   false
 end
 
 def input_to_index(input)
   input.to_i - 1
-end
-
-def move(board, index, token='X')
-  if valid_move?(board, index)
-    board[index] = token
-  end
 end
